@@ -30,6 +30,14 @@ class PhotoListViewModel {
         self.apiService = apiService
     }
     
+    // MARK: - resetPage
+    func resetPage(onComplete: @escaping() -> (Void)) {
+        currentPage = 1
+        self.photoGallery.value = []
+        fetchData() {
+            onComplete()
+        }
+    }
     // MARK: - Api Calls
     
     func fetchData(onComplete: @escaping() -> (Void)) {
