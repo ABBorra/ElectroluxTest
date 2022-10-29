@@ -16,6 +16,13 @@
 		5AF3E8EB290DB67800946E99 /* ElectroluxTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF3E8EA290DB67800946E99 /* ElectroluxTestTests.swift */; };
 		5AF3E8F5290DB67800946E99 /* ElectroluxTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF3E8F4290DB67800946E99 /* ElectroluxTestUITests.swift */; };
 		5AF3E8F7290DB67800946E99 /* ElectroluxTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF3E8F6290DB67800946E99 /* ElectroluxTestUITestsLaunchTests.swift */; };
+		5AF3E909290DC10500946E99 /* PhotoListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF3E908290DC10500946E99 /* PhotoListModel.swift */; };
+		5AF3E90D290DC1F300946E99 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF3E90C290DC1F300946E99 /* Secrets.swift */; };
+		5AF3E910290DC3AF00946E99 /* ApiUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF3E90F290DC3AF00946E99 /* ApiUrls.swift */; };
+		5AF3E913290DC6B400946E99 /* PhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF3E912290DC6B400946E99 /* PhotoListViewModel.swift */; };
+		5AF3E916290DC7AF00946E99 /* PhotosApiRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF3E915290DC7AF00946E99 /* PhotosApiRepository.swift */; };
+		5AF3E919290DC88500946E99 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF3E918290DC88500946E99 /* Request.swift */; };
+		5AF3E91C290DC8CE00946E99 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF3E91B290DC8CE00946E99 /* Observer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,13 @@
 		5AF3E8F0290DB67800946E99 /* ElectroluxTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElectroluxTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AF3E8F4290DB67800946E99 /* ElectroluxTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectroluxTestUITests.swift; sourceTree = "<group>"; };
 		5AF3E8F6290DB67800946E99 /* ElectroluxTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectroluxTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5AF3E908290DC10500946E99 /* PhotoListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListModel.swift; sourceTree = "<group>"; };
+		5AF3E90C290DC1F300946E99 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		5AF3E90F290DC3AF00946E99 /* ApiUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUrls.swift; sourceTree = "<group>"; };
+		5AF3E912290DC6B400946E99 /* PhotoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewModel.swift; sourceTree = "<group>"; };
+		5AF3E915290DC7AF00946E99 /* PhotosApiRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosApiRepository.swift; sourceTree = "<group>"; };
+		5AF3E918290DC88500946E99 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		5AF3E91B290DC8CE00946E99 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +115,7 @@
 			children = (
 				5AF3E903290DBAC000946E99 /* AppDelegate */,
 				5AF3E904290DBC2600946E99 /* Modules */,
+				5AF3E90A290DC17C00946E99 /* Library */,
 				5AF3E8D9290DB67400946E99 /* Main.storyboard */,
 				5AF3E8DC290DB67800946E99 /* Assets.xcassets */,
 				5AF3E8DE290DB67800946E99 /* LaunchScreen.storyboard */,
@@ -146,6 +161,8 @@
 		5AF3E905290DBC3E00946E99 /* PhotoList */ = {
 			isa = PBXGroup;
 			children = (
+				5AF3E911290DC68200946E99 /* ViewModel */,
+				5AF3E907290DC0D200946E99 /* Model */,
 				5AF3E906290DBC5100946E99 /* Controllers */,
 			);
 			path = PhotoList;
@@ -157,6 +174,66 @@
 				5AF3E8D7290DB67400946E99 /* PhotosListViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5AF3E907290DC0D200946E99 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5AF3E908290DC10500946E99 /* PhotoListModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5AF3E90A290DC17C00946E99 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				5AF3E917290DC86000946E99 /* Util */,
+				5AF3E90E290DC37500946E99 /* ApiRepository */,
+				5AF3E90B290DC1CE00946E99 /* Constants */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		5AF3E90B290DC1CE00946E99 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				5AF3E90C290DC1F300946E99 /* Secrets.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		5AF3E90E290DC37500946E99 /* ApiRepository */ = {
+			isa = PBXGroup;
+			children = (
+				5AF3E914290DC78500946E99 /* PhotosApiRepository */,
+				5AF3E90F290DC3AF00946E99 /* ApiUrls.swift */,
+			);
+			path = ApiRepository;
+			sourceTree = "<group>";
+		};
+		5AF3E911290DC68200946E99 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5AF3E912290DC6B400946E99 /* PhotoListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5AF3E914290DC78500946E99 /* PhotosApiRepository */ = {
+			isa = PBXGroup;
+			children = (
+				5AF3E915290DC7AF00946E99 /* PhotosApiRepository.swift */,
+			);
+			path = PhotosApiRepository;
+			sourceTree = "<group>";
+		};
+		5AF3E917290DC86000946E99 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				5AF3E918290DC88500946E99 /* Request.swift */,
+				5AF3E91B290DC8CE00946E99 /* Observer.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,8 +368,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AF3E8D8290DB67400946E99 /* PhotosListViewController.swift in Sources */,
+				5AF3E91C290DC8CE00946E99 /* Observer.swift in Sources */,
+				5AF3E90D290DC1F300946E99 /* Secrets.swift in Sources */,
 				5AF3E8D4290DB67400946E99 /* AppDelegate.swift in Sources */,
+				5AF3E916290DC7AF00946E99 /* PhotosApiRepository.swift in Sources */,
+				5AF3E909290DC10500946E99 /* PhotoListModel.swift in Sources */,
+				5AF3E910290DC3AF00946E99 /* ApiUrls.swift in Sources */,
 				5AF3E8D6290DB67400946E99 /* SceneDelegate.swift in Sources */,
+				5AF3E919290DC88500946E99 /* Request.swift in Sources */,
+				5AF3E913290DC6B400946E99 /* PhotoListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +560,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -503,6 +588,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
