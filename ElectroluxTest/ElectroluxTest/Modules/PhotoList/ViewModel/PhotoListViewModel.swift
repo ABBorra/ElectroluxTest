@@ -21,4 +21,30 @@ class PhotoListViewModel {
     var newPhotosCount: Int {
         return photoGallery.value?.count ?? 0
     }
+    
+    // MARK: - Dependency
+    let apiService: PhotosApiProtocol
+    
+    // MARK: - Lifecycle
+    init(apiService: PhotosApiProtocol = PhotosApi()) {
+        self.apiService = apiService
+    }
+    
+    // MARK: - Api Calls
+    
+    func fetchData(onComplete: @escaping() -> (Void)) {
+        if (searchImage ?? "").isEmpty {
+            searchImage = "Electrolux"
+        }
+        
+        apiService.getPhotosItems(pageSize: self.pageSize, page: self.currentPage, apiKey: Secrets.photoApiKey, searchImage: searchImage?.trimmingCharacters(in: NSCharacterSet.whitespaces) ?? "Electrolux", serviceName: Secrets.serviceName) { obj in
+            if let dataResponse = obj?.photos,
+               let photos = dataResponse.photo {
+                self.photoGallery.value!  += photos
+                self.currentPage += 1
+                onComplete()
+            }
+        }
+    }
+    
 }
