@@ -71,23 +71,23 @@ class PhotoDetailedViewController: UIViewController {
     }()
     
     lazy var titleNameLbl: UILabel = {
-        return genericLbl(textfont: .boldSystemFont(ofSize: 18))
+        return genericLbl(textfont: .boldSystemFont(ofSize: 18), textColor: .systemTeal)
     }()
     
     lazy var photoIdLbl: UILabel = {
-        return genericLbl(textfont: .systemFont(ofSize: 18))
+        return genericLbl(textfont: .systemFont(ofSize: 18), textColor: .gray)
     }()
     
     lazy var ownerLbl: UILabel = {
-        return genericLbl(textfont: .systemFont(ofSize: 18))
+        return genericLbl(textfont: .systemFont(ofSize: 18), textColor: .gray)
     }()
     
     // MARK: - setup genericLbl
-    func genericLbl(textfont: UIFont) -> UILabel {
+    func genericLbl(textfont: UIFont, textColor: UIColor) -> UILabel {
         let lbl = UILabel(frame: .zero)
         lbl.textAlignment = .left
         lbl.numberOfLines = 0
-        lbl.textColor = .black
+        lbl.textColor = textColor
         lbl.font = textfont
         lbl.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
         return lbl
@@ -95,9 +95,9 @@ class PhotoDetailedViewController: UIViewController {
     // MARK: - Adding SubViews
     func addViews() {
         userImage.loadImageWith(urlString: viewModel.imageURL ?? "")
-        titleNameLbl.text = "Title: \(viewModel.title ?? "")"
-        photoIdLbl.text = "PhotoID: \(viewModel.photoId ?? "")"
-        ownerLbl.text =  "OwnerID: \(viewModel.ownerId ?? "")"
+        titleNameLbl.text = "\(viewModel.title ?? "")"
+        photoIdLbl.text = "PhotoId: \(viewModel.photoId ?? "")"
+        ownerLbl.text =  "Owner: \(viewModel.ownerId ?? "")"
         
         self.view.addSubview(userImage)
         self.view.addSubview(titleNameLbl)
