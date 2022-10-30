@@ -14,3 +14,44 @@ Xcode: 13.3
 - REST API integration
 - Dependency injection 
 - Collection with PageList and load more
+
+# Folder Structure
+
+```
+ElectroluxTest
+├─ Modules
+│  │ └─ PhotoList
+│  │    ├─ Model
+│  │    │  └─ PhotoListModel
+│  │    ├─ Views
+│  │    │  └─ PhotoListCollectionViewCell
+│  │    ├─ ViewModel
+│  │    │  └─ PhotoListViewModel
+│  │    │
+│  │    └─ Controller
+│  │       └─ PhotosListViewController
+│  └─ DetailsList
+|       ├─ ViewModel
+|       |    └─ PhotoDetailViewModel
+|       └─ Controller
+|           └─ PhotosListDetailedViewController
+└─ Library
+   ├─ Constants
+   │  └─ Secrets
+   ├─ Extensions
+   │  └─ ViewExtension 
+   |  |
+   |  └─ UIImageViewExtension
+   |  └─ UIImageViewExtension
+   |  └─ Image Saver
+   |
+   └─ UIImageViewExtension
+   ├─ ApiRepository
+   │  ├─ PhotosApiRepository
+   │  │  └─  PhotosApiRepository
+   │  │    
+   │  └─ ApiUrl
+   └─ Util
+      ├─ Request
+      └─ Observer
+```
