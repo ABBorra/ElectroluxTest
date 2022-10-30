@@ -53,6 +53,8 @@ class PhotoListViewModel {
                     self.photoGallery.value!  += photos
                     self.currentPage += 1
                     onComplete()
+                } else {
+                   
                 }
             }
             
