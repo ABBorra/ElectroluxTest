@@ -25,7 +25,7 @@ class PhotosListCollectionViewCell: UICollectionViewCell {
     }()
     
     lazy var titleLbl: UILabel = {
-        return genericLbl(textfont: .systemFont(ofSize: 16))
+        return genericLbl(textfont: .systemFont(ofSize: 15))
     }()
     
     // MARK: - setup genericLbl
