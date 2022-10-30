@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Toaster
 
 class PhotoDetailedViewController: UIViewController {
 
@@ -49,6 +50,10 @@ class PhotoDetailedViewController: UIViewController {
     @objc func saveBtnAction(sender: UIBarButtonItem) {
         let imageSaver = ImageSaver()
         imageSaver.downloadToPhotoAlbum(image: self.userImage.image ?? UIImage())
+        
+        let toast = Toast(text: "SUCCESS! \n \("Photo Saved to gallery.")")
+        ToastView.appearance().backgroundColor = .systemTeal
+         toast.show()
     }
    
     // MARK: - components

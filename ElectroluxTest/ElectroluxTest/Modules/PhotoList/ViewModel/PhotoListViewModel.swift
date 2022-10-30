@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Toaster
 
 class PhotoListViewModel {
     
@@ -47,7 +48,8 @@ class PhotoListViewModel {
         
         apiService.getPhotosItems(pageSize: self.pageSize, page: self.currentPage, apiKey: Secrets.photoApiKey, searchImage: searchImage?.trimmingCharacters(in: NSCharacterSet.whitespaces) ?? "Electrolux", serviceName: Secrets.serviceName) { obj,error  in
             if let errorMessage = error {
-                print(errorMessage.localizedDescription)
+                let toast = Toast(text: errorMessage.localizedDescription, delay: Delay.short, duration: Delay.long)
+                toast.show()
             } else {
                 if let dataResponse = obj?.photos,
                    let photos = dataResponse.photo, photos.count > 0 {
@@ -56,6 +58,12 @@ class PhotoListViewModel {
                     onComplete()
                 } else {
                     // Handle Empty or failure data
+                    DispatchQueue.main.async {
+                       let toast = Toast(text: "No Search found")
+                        ToastView.appearance().backgroundColor = .red
+                        toast.show()
+                    }
+                   
                 }
             }
             

@@ -1,16 +1,20 @@
 PODS:
   - Kingfisher (7.4.1)
+  - Toaster (2.3.0)
 
 DEPENDENCIES:
   - Kingfisher (~> 7.0)
+  - Toaster
 
 SPEC REPOS:
   trunk:
     - Kingfisher
+    - Toaster
 
 SPEC CHECKSUMS:
   Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
+  Toaster: c3473963c78e8cabbf6ea6f11ad0fdaae6f54987
 
-PODFILE CHECKSUM: 01699a522884cd69adcdd226dad9cfd9e0aaa9f7
+PODFILE CHECKSUM: b8ca7870b2e089ed2e435b4d2b1f505b661b9781
 
 COCOAPODS: 1.11.3
