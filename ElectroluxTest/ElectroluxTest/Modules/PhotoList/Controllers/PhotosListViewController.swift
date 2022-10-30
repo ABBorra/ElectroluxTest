@@ -151,7 +151,6 @@ extension PhotosListViewController: UICollectionViewDelegate, UICollectionViewDa
     // MARK: - Load more photos with Pagination
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let contentOffsetY = scrollView.contentOffset.y
-        let scrollViewCanScrollDown = contentOffsetY > scrollView.bounds.height
         let scrollViewIsAtBottom = (contentOffsetY >= (scrollView.contentSize.height - scrollView.bounds.height))
         let scrollViewCanScrollDownToBottom = (scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height))
         
