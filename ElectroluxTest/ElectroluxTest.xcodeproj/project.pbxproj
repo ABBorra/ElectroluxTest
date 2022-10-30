@@ -10,7 +10,6 @@
 		5AF3E8D4290DB67400946E99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF3E8D3290DB67400946E99 /* AppDelegate.swift */; };
 		5AF3E8D6290DB67400946E99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF3E8D5290DB67400946E99 /* SceneDelegate.swift */; };
 		5AF3E8D8290DB67400946E99 /* PhotosListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF3E8D7290DB67400946E99 /* PhotosListViewController.swift */; };
-		5AF3E8DB290DB67400946E99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AF3E8D9290DB67400946E99 /* Main.storyboard */; };
 		5AF3E8DD290DB67800946E99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AF3E8DC290DB67800946E99 /* Assets.xcassets */; };
 		5AF3E8E0290DB67800946E99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AF3E8DE290DB67800946E99 /* LaunchScreen.storyboard */; };
 		5AF3E8EB290DB67800946E99 /* ElectroluxTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF3E8EA290DB67800946E99 /* ElectroluxTestTests.swift */; };
@@ -60,7 +59,6 @@
 		5AF3E8D3290DB67400946E99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5AF3E8D5290DB67400946E99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5AF3E8D7290DB67400946E99 /* PhotosListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListViewController.swift; sourceTree = "<group>"; };
-		5AF3E8DA290DB67400946E99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5AF3E8DC290DB67800946E99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5AF3E8DF290DB67800946E99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5AF3E8E1290DB67800946E99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -155,7 +153,6 @@
 				5AF3E903290DBAC000946E99 /* AppDelegate */,
 				5AF3E904290DBC2600946E99 /* Modules */,
 				5AF3E90A290DC17C00946E99 /* Library */,
-				5AF3E8D9290DB67400946E99 /* Main.storyboard */,
 				5AF3E8DC290DB67800946E99 /* Assets.xcassets */,
 				5AF3E8DE290DB67800946E99 /* LaunchScreen.storyboard */,
 				5AF3E8E1290DB67800946E99 /* Info.plist */,
@@ -453,7 +450,6 @@
 			files = (
 				5AF3E8E0290DB67800946E99 /* LaunchScreen.storyboard in Resources */,
 				5AF3E8DD290DB67800946E99 /* Assets.xcassets in Resources */,
-				5AF3E8DB290DB67400946E99 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,14 +629,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5AF3E8D9290DB67400946E99 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5AF3E8DA290DB67400946E99 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5AF3E8DE290DB67800946E99 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -778,7 +766,7 @@
 				INFOPLIST_FILE = ElectroluxTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -807,7 +795,7 @@
 				INFOPLIST_FILE = ElectroluxTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
