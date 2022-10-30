@@ -142,6 +142,7 @@ extension PhotosListViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        photoSearchBar.resignFirstResponder()
         let selectedPhotoInfo = viewModel.photoGallery.value?[indexPath.row]
         let vm = PhotoDetailViewModel(imageURL: selectedPhotoInfo?.urlM ?? "", title: selectedPhotoInfo?.title ?? "", photoId: selectedPhotoInfo?.id ?? "", ownerId: selectedPhotoInfo?.owner ?? "")
         let vc = PhotoDetailedViewController(viewModel: vm)
@@ -177,11 +178,20 @@ extension PhotosListViewController: UISearchBarDelegate {
     }
         
     func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
+        searchBar.resignFirstResponder()
         return true
     }
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        photoSearchBar.resignFirstResponder()
+    }
+
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
+        searchingWithHashtag(searchText)
+    }
+    
+    // MARK: - search With hashTag
+    fileprivate func searchingWithHashtag(_ searchText: String) {
         self.photoSearchBar.showsCancelButton = true
         self.viewModel.searchImage = searchText
         if (self.viewModel.searchImage ?? "").isEmpty {
