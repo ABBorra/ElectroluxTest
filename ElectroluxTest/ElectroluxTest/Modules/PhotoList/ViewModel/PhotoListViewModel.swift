@@ -45,13 +45,17 @@ class PhotoListViewModel {
             searchImage = "Electrolux"
         }
         
-        apiService.getPhotosItems(pageSize: self.pageSize, page: self.currentPage, apiKey: Secrets.photoApiKey, searchImage: searchImage?.trimmingCharacters(in: NSCharacterSet.whitespaces) ?? "Electrolux", serviceName: Secrets.serviceName) { obj in
-            if let dataResponse = obj?.photos,
-               let photos = dataResponse.photo {
-                self.photoGallery.value!  += photos
-                self.currentPage += 1
-                onComplete()
+        apiService.getPhotosItems(pageSize: self.pageSize, page: self.currentPage, apiKey: Secrets.photoApiKey, searchImage: searchImage?.trimmingCharacters(in: NSCharacterSet.whitespaces) ?? "Electrolux", serviceName: Secrets.serviceName) { obj,error  in
+            if let errorMessage = error {
+            } else {
+                if let dataResponse = obj?.photos,
+                   let photos = dataResponse.photo {
+                    self.photoGallery.value!  += photos
+                    self.currentPage += 1
+                    onComplete()
+                }
             }
+            
         }
     }
     
