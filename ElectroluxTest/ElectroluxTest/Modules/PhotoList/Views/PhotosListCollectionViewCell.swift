@@ -37,6 +37,7 @@ class PhotosListCollectionViewCell: UICollectionViewCell {
     // MARK: - Lifecycle
     func configure(data: Photo) {
         if let imageURL = data.urlM {
+            // Display Images using KF Lib
             self.userImage.loadImageWith(urlString: imageURL)
         }
         addViews()
