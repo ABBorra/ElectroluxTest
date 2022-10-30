@@ -79,13 +79,16 @@ class PhotosListViewController: UIViewController {
         self.photoCollectionView.anchor(top: self.photoSearchBar.bottomAnchor, topConstant: 4, left: self.view.leftAnchor, leftConstant: 8, bottom: self.view.bottomAnchor, bottomConstant: 0, right: self.view.rightAnchor, rightConstant: 8)
         
          addObservor()
-        
-        /* Initial API call*/
-        viewModel.fetchData {}
+        self.fetchPhotoDisplayData()
     }
     
     func regsiterCell() {
         photoCollectionView.register(PhotosListCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+    }
+    
+    // MARK: - FetchData
+    fileprivate func fetchPhotoDisplayData() {
+        self.viewModel.fetchData{}
     }
     
     // MARK: - ReloadCollection when new data
@@ -154,7 +157,7 @@ extension PhotosListViewController: UICollectionViewDelegate, UICollectionViewDa
         
         if scrollViewIsAtBottom && scrollViewCanScrollDownToBottom {
             DispatchQueue.main.async {
-                self.viewModel.fetchData{}
+                self.fetchPhotoDisplayData()
                 self.photoCollectionView.reloadData()
             }
         }
