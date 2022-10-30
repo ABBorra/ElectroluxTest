@@ -37,7 +37,7 @@ class PhotosListCollectionViewCell: UICollectionViewCell {
     // MARK: - Lifecycle
     func configure(data: Photo) {
         if let imageURL = data.urlM {
-            //self.userImage.load(urlString: imageURL)
+            self.userImage.loadImageWith(urlString: imageURL)
         }
         addViews()
     }
