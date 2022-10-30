@@ -147,8 +147,9 @@ extension PhotosListViewController: UICollectionViewDelegate, UICollectionViewDa
         let contentOffsetY = scrollView.contentOffset.y
         let scrollViewCanScrollDown = contentOffsetY > scrollView.bounds.height
         let scrollViewIsAtBottom = (contentOffsetY >= (scrollView.contentSize.height - scrollView.bounds.height))
+        let scrollViewCanScrollDownToBottom = (scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height))
         
-        if scrollViewIsAtBottom && scrollViewCanScrollDown {
+        if scrollViewIsAtBottom && scrollViewCanScrollDownToBottom {
             DispatchQueue.main.async {
                 self.viewModel.fetchData{}
                 self.photoCollectionView.reloadData()
