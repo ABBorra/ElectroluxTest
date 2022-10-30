@@ -11,13 +11,27 @@ class PhotoDetailedViewController: UIViewController {
 
     // MARK: - Propeties
     var imageUrl: String? = nil
+    
+    // MARK: - VM
+    var viewModel: PhotoDetialViewModelProtocol
 
     // MARK: - StatusBar height cal and
     var statusBarHeight: CGFloat {
         let viewController = UIApplication.shared.windows.first!.rootViewController
         return viewController!.view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
     }
+    
     lazy var navBarHeight = self.navigationController?.navigationBar.frame.size.height ?? 80
+    
+    // MARK: - VM initialiser 
+    init(viewModel: PhotoDetialViewModelProtocol = PhotoDetailViewModel()) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
