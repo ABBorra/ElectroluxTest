@@ -51,6 +51,7 @@ extension UIView {
                                    rightConstant: CGFloat = 0,
                                    widthConstant: CGFloat? = nil,
                                    heightConstant: CGFloat? = nil,
+                                   heightPriority: Float? = 100,
                                    isHeightConstantLowPriority: Bool? = nil) -> [NSLayoutConstraint] {
         translatesAutoresizingMaskIntoConstraints = false
         var constraints = [NSLayoutConstraint]()
@@ -71,7 +72,7 @@ extension UIView {
         }
         if let heightConstant = heightConstant {
             if let _ = isHeightConstantLowPriority {
-                constraints.append(heightAnchor.constraint(equalToConstant: heightConstant).withPriority(100))
+                constraints.append(heightAnchor.constraint(equalToConstant: heightConstant).withPriority(heightPriority ?? 1000.0))
             } else {
                 constraints.append(heightAnchor.constraint(equalToConstant: heightConstant))
             }
