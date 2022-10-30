@@ -139,7 +139,10 @@ extension PhotosListViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let selectedPhotoInfo = viewModel.photoGallery.value?[indexPath.row]
+        let vm = PhotoDetailViewModel(imageURL: selectedPhotoInfo?.urlM ?? "", title: selectedPhotoInfo?.title ?? "", photoId: selectedPhotoInfo?.id ?? "", ownerId: selectedPhotoInfo?.owner ?? "")
+        let vc = PhotoDetailedViewController(viewModel: vm)
+        self.navigationController?.pushViewController(vc, animated:true)
     }
     
     // MARK: - Load more photos with Pagination
