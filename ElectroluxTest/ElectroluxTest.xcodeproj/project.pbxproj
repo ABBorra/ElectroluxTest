@@ -225,10 +225,10 @@
 		5AF3E90A290DC17C00946E99 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				5AF3E920290DE47500946E99 /* Extensions */,
-				5AF3E917290DC86000946E99 /* Util */,
-				5AF3E90E290DC37500946E99 /* ApiRepository */,
 				5AF3E90B290DC1CE00946E99 /* Constants */,
+				5AF3E920290DE47500946E99 /* Extensions */,
+				5AF3E90E290DC37500946E99 /* ApiRepository */,
+				5AF3E917290DC86000946E99 /* Util */,
 			);
 			path = Library;
 			sourceTree = "<group>";
