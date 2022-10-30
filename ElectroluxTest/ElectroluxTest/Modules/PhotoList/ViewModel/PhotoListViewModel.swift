@@ -47,14 +47,15 @@ class PhotoListViewModel {
         
         apiService.getPhotosItems(pageSize: self.pageSize, page: self.currentPage, apiKey: Secrets.photoApiKey, searchImage: searchImage?.trimmingCharacters(in: NSCharacterSet.whitespaces) ?? "Electrolux", serviceName: Secrets.serviceName) { obj,error  in
             if let errorMessage = error {
+                print(errorMessage.localizedDescription)
             } else {
                 if let dataResponse = obj?.photos,
-                   let photos = dataResponse.photo {
+                   let photos = dataResponse.photo, photos.count > 0 {
                     self.photoGallery.value!  += photos
                     self.currentPage += 1
                     onComplete()
                 } else {
-                   
+                    // Handle Empty or failure data
                 }
             }
             
