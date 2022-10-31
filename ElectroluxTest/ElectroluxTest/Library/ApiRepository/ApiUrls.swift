@@ -8,8 +8,8 @@
 import Foundation
 
 struct ApiUrls {
-    static var photosApiUrl: String {
-        return "https://api.flickr.com/services/rest"
+    static var baseUrl: String {
+        return "https://api.flickr.com/services/rest?"
     }
 }
 
