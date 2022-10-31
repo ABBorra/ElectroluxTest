@@ -60,9 +60,7 @@ ElectroluxTest
 
 ![image](https://user-images.githubusercontent.com/116728482/198914198-977ebb1c-5081-4c11-80fe-78a3f17f08da.png)
 
-![image](https://user-images.githubusercontent.com/116728482/198914267-d1528cd5-263c-49fa-a54c-06aaa9f57429.png)
-
-![image](https://user-images.githubusercontent.com/116728482/198914198-977ebb1c-5081-4c11-80fe-78a3f17f08da.png)
+![Simulator Screen Shot - iPhone 12 - 2022-10-31 at 09 47 13](https://user-images.githubusercontent.com/116728482/198914915-f37c0558-b014-420e-9099-57868ced6f88.png)
 
 
 
