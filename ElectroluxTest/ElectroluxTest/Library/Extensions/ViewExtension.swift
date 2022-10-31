@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 extension UIView {
-    
+    // MARK: - Constaints to superView
     func addConstraintsToSuperview(_ view: UIView,
                                    topConstraint: CGFloat = 0.0,
                                    bottomConstraint: CGFloat = 0.0,
@@ -26,6 +26,7 @@ extension UIView {
         
     }
    
+    // MARK: - Constaints vertically - Superview
     func addConstraintsForVerticalTopToSuperview(_ view: UIView,
                                               leadingConstraint: CGFloat = 0.0,
                                               trailingConstraint: CGFloat = 0.0,
@@ -41,6 +42,7 @@ extension UIView {
         ].forEach { $0.isActive = true }
     }
     
+    // MARK: - Anchor Constaints
     @discardableResult func anchor(top: NSLayoutYAxisAnchor? = nil,
                                    topConstant: CGFloat = 0,
                                    left: NSLayoutXAxisAnchor? = nil,

@@ -46,7 +46,7 @@ class PhotoListViewModel {
             searchImage = Secrets.defaultSearchTag
         }
         
-        apiService.getPhotosItems(pageSize: self.pageSize, page: self.currentPage, apiKey: Secrets.photoApiKey, searchImage: searchImage?.trimmingCharacters(in: NSCharacterSet.whitespaces) ?? Secrets.defaultSearchTag, serviceName: Secrets.serviceName, optionalParams: Secrets.optionalParams) { obj,error  in
+        apiService.getPhotosItems(pageSize: self.pageSize, page: self.currentPage, apiKey: Secrets.photoApiKey, searchImage: searchImage?.trimmingCharacters(in: NSCharacterSet.whitespaces) ?? Secrets.defaultSearchTag, serviceName: Secrets.serviceName) { obj,error  in
             if let errorMessage = error {
                 DispatchQueue.main.async {
                 let toast = Toast(text: errorMessage.localizedDescription, delay: Delay.short, duration: Delay.long)
