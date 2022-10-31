@@ -15,6 +15,11 @@ Xcode: 13.3
 - Dependency injection 
 - Collection with PageList and load more
 
+# Note 
+- Before Running the project, Please install pods.
+- cd _ project Path ~
+- pod install
+
 # Folder Structure
 
 ```
