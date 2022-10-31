@@ -9,7 +9,7 @@ Swift version: &gt  5.0
 Xcode: 13.3
 
 # Concepts Included
-- Loading CollectionView with hashTags for  flickr photo using API - EG: [https://api.flickr.com/services/rest).
+- Loading CollectionView with search hashTags for  flickr photo using flickr API - EG: [https://api.flickr.com/services/rest).
 - Selection of photos navigation to Photo Details.
 - REST API integration
 - Dependency injection 
