@@ -52,8 +52,10 @@ ElectroluxTest
    │  │    
    │  └─ ApiUrl
    └─ Util
-      ├─ Request
-      └─ Observer
+      |
+      |-- Request
+      |-- Observer
+      └─ NetWorkManager
 ```
 
 # Screenshots
