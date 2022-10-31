@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Toaster
 
 class PhotosListViewController: UIViewController {
     
@@ -115,6 +116,13 @@ class PhotosListViewController: UIViewController {
     }
     
     @objc func onPullRefresh() {
+        guard NetworkManager.isReachable() else {
+            self.refreshControl.endRefreshing()
+            let toast = Toast(text: "No internet Connection")
+            ToastView.appearance().backgroundColor = .red
+            toast.show()
+            return
+        }
         self.viewModel.resetPage() {
             DispatchQueue.main.async {
                 self.refreshControl.endRefreshing()

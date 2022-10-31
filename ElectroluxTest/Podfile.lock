@@ -1,20 +1,24 @@
 PODS:
+  - Alamofire (5.6.2)
   - Kingfisher (7.4.1)
   - Toaster (2.3.0)
 
 DEPENDENCIES:
+  - Alamofire
   - Kingfisher (~> 7.0)
   - Toaster
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - Kingfisher
     - Toaster
 
 SPEC CHECKSUMS:
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
   Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
   Toaster: c3473963c78e8cabbf6ea6f11ad0fdaae6f54987
 
-PODFILE CHECKSUM: b8ca7870b2e089ed2e435b4d2b1f505b661b9781
+PODFILE CHECKSUM: c45f6c3908ff7bed6cd19b1aac3640c78032c0da
 
 COCOAPODS: 1.11.3
