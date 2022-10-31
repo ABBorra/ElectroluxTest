@@ -16,7 +16,7 @@ class PhotosListViewController: UIViewController {
     /*SearchBar*/
     lazy var photoSearchBar : UISearchBar = {
         let photoSearch = UISearchBar()
-        photoSearch.placeholder = "Electrolux"
+        photoSearch.placeholder = Secrets.defaultSearchTag
         photoSearch.delegate = self
         photoSearch.tintColor = .gray
         photoSearch.showsCancelButton = false
@@ -172,7 +172,7 @@ extension PhotosListViewController: UISearchBarDelegate {
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.placeholder = "Electrolux"
+        searchBar.placeholder = Secrets.defaultSearchTag
         searchBar.resignFirstResponder()
         self.photoSearchBar.showsCancelButton = false
     }

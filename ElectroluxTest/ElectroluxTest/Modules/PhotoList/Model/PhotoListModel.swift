@@ -11,6 +11,7 @@ import Foundation
 struct PhotoListModel: Codable {
     let photos: Photos?
     let stat: String?
+    let message: String?
 }
 
 // MARK: - Photos

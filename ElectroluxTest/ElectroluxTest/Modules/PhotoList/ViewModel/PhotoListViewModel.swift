@@ -43,13 +43,16 @@ class PhotoListViewModel {
     
     func fetchData(onComplete: @escaping() -> (Void)) {
         if (searchImage ?? "").isEmpty {
-            searchImage = "Electrolux"
+            searchImage = Secrets.defaultSearchTag
         }
         
-        apiService.getPhotosItems(pageSize: self.pageSize, page: self.currentPage, apiKey: Secrets.photoApiKey, searchImage: searchImage?.trimmingCharacters(in: NSCharacterSet.whitespaces) ?? "Electrolux", serviceName: Secrets.serviceName) { obj,error  in
+        apiService.getPhotosItems(pageSize: self.pageSize, page: self.currentPage, apiKey: Secrets.photoApiKey, searchImage: searchImage?.trimmingCharacters(in: NSCharacterSet.whitespaces) ?? Secrets.defaultSearchTag, serviceName: Secrets.serviceName) { obj,error  in
             if let errorMessage = error {
+                DispatchQueue.main.async {
                 let toast = Toast(text: errorMessage.localizedDescription, delay: Delay.short, duration: Delay.long)
                 toast.show()
+                }
+                return
             } else {
                 if let dataResponse = obj?.photos,
                    let photos = dataResponse.photo, photos.count > 0 {
@@ -59,7 +62,7 @@ class PhotoListViewModel {
                 } else {
                     // Handle Empty or failure data
                     DispatchQueue.main.async {
-                       let toast = Toast(text: "No Search found")
+                        let toast = Toast(text: obj?.message ?? "No search result found")
                         ToastView.appearance().backgroundColor = .red
                         toast.show()
                     }
