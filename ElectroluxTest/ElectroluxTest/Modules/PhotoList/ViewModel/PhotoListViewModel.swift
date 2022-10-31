@@ -50,6 +50,7 @@ class PhotoListViewModel {
             if let errorMessage = error {
                 DispatchQueue.main.async {
                 let toast = Toast(text: errorMessage.localizedDescription, delay: Delay.short, duration: Delay.long)
+                    ToastView.appearance().backgroundColor = .red
                 toast.show()
                 }
                 return
