@@ -62,6 +62,7 @@ class PhotoDetailedViewController: UIViewController {
         saveImageButton()
         self.addViews()
     }
+    
     lazy var userImage: UIImageView = {
         let imageView = UIImageView(frame: .zero)
         imageView.layer.cornerRadius = CGFloat(5)
