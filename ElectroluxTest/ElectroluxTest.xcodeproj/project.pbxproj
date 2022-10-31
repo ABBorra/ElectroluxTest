@@ -28,6 +28,7 @@
 		5AF3E927290E14F400946E99 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF3E926290E14F400946E99 /* ImageSaver.swift */; };
 		5AF3E92A290E3F8A00946E99 /* PhotoDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF3E929290E3F8A00946E99 /* PhotoDetailedViewController.swift */; };
 		5AF3E92F290E425900946E99 /* PhotoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF3E92E290E425900946E99 /* PhotoDetailViewModel.swift */; };
+		5AF3E933290FB86B00946E99 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF3E932290FB86B00946E99 /* NetworkManager.swift */; };
 		82978B3E19E7306E9F7E6E12 /* Pods_ElectroluxTest_ElectroluxTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBE70C6263B8854A39FF6A88 /* Pods_ElectroluxTest_ElectroluxTestUITests.framework */; };
 		89C9057C30F781CCD195D833 /* Pods_ElectroluxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19DABFDA1CA2518FED6A22F5 /* Pods_ElectroluxTest.framework */; };
 		E92D6E7CAABEC9E984B29C2B /* Pods_ElectroluxTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E98A054E4AAB92D912D9774 /* Pods_ElectroluxTestTests.framework */; };
@@ -80,6 +81,7 @@
 		5AF3E926290E14F400946E99 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 		5AF3E929290E3F8A00946E99 /* PhotoDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailedViewController.swift; sourceTree = "<group>"; };
 		5AF3E92E290E425900946E99 /* PhotoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewModel.swift; sourceTree = "<group>"; };
+		5AF3E932290FB86B00946E99 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		6E98A054E4AAB92D912D9774 /* Pods_ElectroluxTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ElectroluxTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1ED3ED50A13FA18F819083F /* Pods-ElectroluxTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElectroluxTest.release.xcconfig"; path = "Target Support Files/Pods-ElectroluxTest/Pods-ElectroluxTest.release.xcconfig"; sourceTree = "<group>"; };
 		FB9C3A857D6A922AF38A2BA8 /* Pods-ElectroluxTest-ElectroluxTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElectroluxTest-ElectroluxTestUITests.release.xcconfig"; path = "Target Support Files/Pods-ElectroluxTest-ElectroluxTestUITests/Pods-ElectroluxTest-ElectroluxTestUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 			children = (
 				5AF3E918290DC88500946E99 /* Request.swift */,
 				5AF3E91B290DC8CE00946E99 /* Observer.swift */,
+				5AF3E932290FB86B00946E99 /* NetworkManager.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -587,6 +590,7 @@
 				5AF3E916290DC7AF00946E99 /* PhotosApiRepository.swift in Sources */,
 				5AF3E909290DC10500946E99 /* PhotoListModel.swift in Sources */,
 				5AF3E922290DE4A300946E99 /* ViewExtension.swift in Sources */,
+				5AF3E933290FB86B00946E99 /* NetworkManager.swift in Sources */,
 				5AF3E910290DC3AF00946E99 /* ApiUrls.swift in Sources */,
 				5AF3E8D6290DB67400946E99 /* SceneDelegate.swift in Sources */,
 				5AF3E919290DC88500946E99 /* Request.swift in Sources */,
